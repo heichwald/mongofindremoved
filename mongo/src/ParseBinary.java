@@ -56,7 +56,7 @@ public class ParseBinary {
 	}
 
 	public static void main(String[] args) throws IOException {
-		MongoClient client = new MongoClient("mongo01.dev.nymag.biz");
+		MongoClient client = new MongoClient("");
 		DB db = client.getDB("recovery_assets");
 		DBCollection images = db.getCollection("images");
 		images.ensureIndex(new BasicDBObject("path", 1), "path_index", true);
